@@ -1,3 +1,6 @@
+mod string_demo;
+mod tupple_demo;
+
 fn main() {
     println!("Hello, world!");
     let num:u8 = 5;
@@ -17,4 +20,20 @@ fn main() {
     println!("Updated string s1 is: {}", s1);
 
 
+
+    println!();
+    println!();
+    println!("String started");
+    println!("--------------START----------------");
+    string_demo::run();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+    println!("Tupple Started");
+    println!("--------------START----------------");
+    tupple_demo::tup();
+    println!("----------------END----------------");
+    println!();
+    println!();
 }
