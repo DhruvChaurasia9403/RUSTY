@@ -1,5 +1,6 @@
 mod string_demo;
 mod tupple_demo;
+mod functions_demo;
 
 fn main() {
     println!("Hello, world!");
@@ -33,6 +34,15 @@ fn main() {
     println!("Tupple Started");
     println!("--------------START----------------");
     tupple_demo::tup();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
+
+    println!("Functions Started");
+    println!("--------------START----------------");
+    functions_demo::fun();
     println!("----------------END----------------");
     println!();
     println!();
