@@ -1,6 +1,7 @@
 mod string_demo;
 mod tupple_demo;
 mod functions_demo;
+mod ownership_inrust;
 
 fn main() {
     println!("Hello, world!");
@@ -43,6 +44,15 @@ fn main() {
     println!("Functions Started");
     println!("--------------START----------------");
     functions_demo::fun();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
+
+    println!("Ownership in Rust Started");
+    println!("--------------START----------------");
+    ownership_inrust::owner();
     println!("----------------END----------------");
     println!();
     println!();
