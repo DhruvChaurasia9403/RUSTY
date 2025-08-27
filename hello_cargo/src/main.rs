@@ -4,6 +4,8 @@ mod functions_demo;
 mod ownership_inrust;
 mod ownership_understanding;
 mod ownership_dealing;
+mod borrowing;
+mod borrowing_rw;
 
 fn main() {
     println!("Hello, world!");
@@ -79,5 +81,29 @@ fn main() {
     println!("----------------END----------------");
     println!();
     println!();
+
+
+
+    println!("Borrowing in Rust Started");
+    println!("--------------START----------------");
+    println!("This is the concept of borrowing istead of cloning we use & (only allows the read operations) and &mut (allows the read and write operations both)");
+    println!("read more in borrowing.rs");
+    borrowing::borrow();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
+
+
+    println!("Borrowing Read Write operations");
+    println!("--------------START----------------");
+    println!("read more in borrowing_rw.rs");
+    borrowing_rw::borrow1();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
 }
 
