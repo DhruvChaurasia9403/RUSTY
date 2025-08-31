@@ -1,11 +1,32 @@
-mod string_demo;
-mod tupple_demo;
-mod functions_demo;
-mod ownership_inrust;
-mod ownership_understanding;
-mod ownership_dealing;
-mod borrowing;
-mod borrowing_rw;
+// inside Collections/
+mod collections {
+    pub mod string_demo;
+    pub mod tupple_demo;
+    pub mod arrays;
+    pub mod vector;
+}
+
+mod loops{
+    pub mod while_loop;
+}
+
+// inside Functions/
+mod functions {
+    pub mod functions_demo;
+}
+
+// inside Ownership/
+mod ownership {
+    pub mod ownership_inrust;
+    pub mod ownership_understanding;
+    pub mod ownership_dealing;
+}
+
+// inside Borrowing/
+mod borrowing {
+    pub mod borrowing;
+    pub mod borrowing_rw;
+}
 
 fn main() {
     println!("Hello, world!");
@@ -31,14 +52,14 @@ fn main() {
     println!();
     println!("String started");
     println!("--------------START----------------");
-    string_demo::run();
+    collections::string_demo::run();
     println!("----------------END----------------");
     println!();
     println!();
 
     println!("Tupple Started");
     println!("--------------START----------------");
-    tupple_demo::tup();
+    collections::tupple_demo::tup();
     println!("----------------END----------------");
     println!();
     println!();
@@ -47,7 +68,7 @@ fn main() {
 
     println!("Functions Started");
     println!("--------------START----------------");
-    functions_demo::fun();
+    functions::functions_demo::fun();
     println!("----------------END----------------");
     println!();
     println!();
@@ -56,7 +77,7 @@ fn main() {
 
     println!("Ownership in Rust Started");
     println!("--------------START----------------");
-    ownership_inrust::owner();
+    ownership::ownership_inrust::owner();
     println!("----------------END----------------");
     println!();
     println!();
@@ -65,7 +86,7 @@ fn main() {
 
     println!("Ownership in Rust Rule 2 : there can only be one owner at a time");
     println!("--------------START----------------");
-    ownership_understanding::owner2();
+    ownership::ownership_understanding::owner2();
     println!("if you will try to print s2 it will throw error because once the s2 was the owner of the \"world\"\n,but now its not and rust has thrown it in garbage!!");
     println!("----------------END----------------");
     println!();
@@ -77,7 +98,7 @@ fn main() {
     println!("--------------START----------------");
     println!("we need to avoid ownership sometimes \nwhy?\nsee the file and find out\nhow?\nit has 3 methods, see the file ownership_dealing");
     println!("Method 1 : making tupple\nMethod 2 : cloning\nMethod 3 : Borrowing - (Next File)");
-    ownership_dealing::owner3();
+    ownership::ownership_dealing::owner3();
     println!("----------------END----------------");
     println!();
     println!();
@@ -88,7 +109,7 @@ fn main() {
     println!("--------------START----------------");
     println!("This is the concept of borrowing istead of cloning we use & (only allows the read operations) and &mut (allows the read and write operations both)");
     println!("read more in borrowing.rs");
-    borrowing::borrow();
+    borrowing::borrowing::borrow();
     println!("----------------END----------------");
     println!();
     println!();
@@ -99,11 +120,39 @@ fn main() {
     println!("Borrowing Read Write operations");
     println!("--------------START----------------");
     println!("read more in borrowing_rw.rs");
-    borrowing_rw::borrow1();
+    borrowing::borrowing_rw::borrow1();
     println!("----------------END----------------");
     println!();
     println!();
 
+
+
+    println!("Arrays");
+    println!("--------------START----------------");
+    println!("read more in arrays.rs");
+    collections::arrays::arr();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
+    println!("Vector");
+    println!("--------------START----------------");
+    println!("read more in vector.rs");
+    collections::vector::ve();
+    println!("----------------END----------------");
+    println!();
+    println!();
+
+
+
+    println!("Loops");
+    println!("--------------START----------------");
+    println!("read more in while_loop.rs");
+    loops::while_loop::lp();
+    println!("----------------END----------------");
+    println!();
+    println!();
 
 }
 
