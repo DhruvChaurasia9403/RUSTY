@@ -8,6 +8,7 @@ mod collections {
 
 mod loops{
     pub mod while_loop;
+    pub mod for_loop;
 }
 
 // inside Functions/
@@ -154,5 +155,14 @@ fn main() {
     println!();
     println!();
 
+
+
+    println!("FOR loop");
+    println!("--------------START----------------");
+    println!("read more in for_loop.rs");
+    loops::for_loop::fr();
+    println!("----------------END----------------");
+    println!();
+    println!();
 }
 
